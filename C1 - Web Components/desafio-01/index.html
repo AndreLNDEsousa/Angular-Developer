@@ -11,8 +11,8 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="card">
+    <div class="app-root">
+        <!-- <div class="card">
             <div class="card_left">
                 <span>By Andre Sousa</span>
                 <a href="#">Darth Vader Contrata Devs</a>
@@ -22,13 +22,21 @@
                 <img src="assets/asset-vader.png" alt="Darth Vader">
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <card-news></card-news>
-    
-    <titulo-dinamico titulo="Noticia Urgente"></titulo-dinamico>
-    <titulo-dinamico titulo="Novo titulo"></titulo-dinamico>
-    <titulo-dinamico titulo="Noticia nova"></titulo-dinamico>
+        <card-news 
+        autor="Andre Sousa" 
+        title="Darth Vader Contrata Devs" 
+        link-url="www.google.com.br"
+        photo="assets/asset-vader.png"
+        content="Darth Vader procura desenvolvedores que sabem trabalhar com componentes"
+        ></card-news>
+
+        <card-news 
+        title="Yoda convence republica a utilizar componentes" link-url="www.google.com/yoda"
+        content="Yoda se pronuncia e choca a republica."
+        ></card-news>
+
 
 </body>
 

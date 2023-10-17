@@ -57,9 +57,73 @@ let meuProduto: ProdutoLoja = {
     unidades: 5,
     
 }
-*/
 //arrays
 let dados: string[] = ['Andre', 'Marcelo', 'Bia'];
 let dados2: Array<string> = ['Andre', 'Marcelo', 'Bia'];
-//vetor com dois tipos de conteúdos diferentes:
+//array multi-type: vetor com dois tipos de conteúdos diferentes:
 let infos: (string | number)[] = ['Andre', 37];
+
+//Tuplas:
+let boleto: [string, number, number] = ['agua conta', 110.90, 102025458];
+
+//Tipo Date(padrão americano  ano, mes, dia e hora)
+let aniversario: Date = new Date("2024-08-03 5:00");
+console.log(aniversario.toString());
+
+
+//Funções
+
+function addNumber(x: number, y: number): number {
+    return x + y;
+}
+
+function addToHello(name: string) {
+    return `Hello ${name}`;
+}
+
+let soma: number = addNumber(4, 7);
+
+console.log(soma);
+console.log(addToHello(" Andre"));
+
+*/
+//interfaces ( types x interface)
+
+type robot = {
+    id: number | string;
+    name: string;
+};
+
+interface robot2 {
+   readonly id: number | string;
+    name: string;
+    sayHello(): string;
+}
+
+const bot1: robot = {
+    id: 1,
+    name:"Megaman",
+};
+const bot2: robot2 = {
+    id: 1,
+    name:"Megaman",
+};
+
+// console.log(bot1);
+// console.log((bot2.name = 'Megazord'));
+
+class Pessoa implements robot2 {
+    id: string | number;
+    name: string;
+    sayHello(): string {
+        return "hello";
+        
+    }
+   
+    
+    constructor (id: number | string, name: string) {
+        this.id = id;
+        this.name = name;
+    }
+}
+

@@ -176,7 +176,7 @@ const p2 = new magic('Spears', 10 , 35, 58);
 p1.attack();
 
 
-*/
+
 
 //Generics
 function concatArray<T>(...itens: T[]): T[]{
@@ -189,4 +189,4 @@ const stArray = concatArray<string[]>(['Britney', 'spears'], ['Goku ', 'Vegeta']
 // numArray.push('Saitama');
 console.log(numArray);
 console.log(stArray);
-
+*/

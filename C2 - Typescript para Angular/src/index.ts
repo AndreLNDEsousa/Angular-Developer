@@ -137,10 +137,10 @@ private - acessa dentro da classe.
 protected
 ? - não obrigatório
 readonly - somente para leitura
-*/
+
 
 class Personagem {
-    private name?: string;
+    public name?: string;
     forca: number;
     skill: number;
 
@@ -159,15 +159,34 @@ class Personagem {
 //Personagem é a superclass.
 //magic é a subclass.
 class magic extends Personagem{
-    constructor(
+        magicPoints: number;
+        constructor(
         name: string,
         forca: number,
         skill: number,
-        magicPoints: number
+        magicPoints: number,
     ) {
         super(name, forca, skill);
+        this.magicPoints = magicPoints;
     }
 }
 
-const p1 = new Personagem ('Britney',10, 90);
+const p1 = new Personagem('Britney', 10, 90);
+const p2 = new magic('Spears', 10 , 35, 58);
 p1.attack();
+
+
+*/
+
+//Generics
+function concatArray<T>(...itens: T[]): T[]{
+    return new Array().concat(...itens);
+}
+
+const numArray = concatArray<number[]>([1, 5], [3]);
+const stArray = concatArray<string[]>(['Britney', 'spears'], ['Goku ', 'Vegeta'])
+
+// numArray.push('Saitama');
+console.log(numArray);
+console.log(stArray);
+

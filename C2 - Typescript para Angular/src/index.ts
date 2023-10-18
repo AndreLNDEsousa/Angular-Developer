@@ -5,7 +5,7 @@
 
 // function printaObjeto(pessoa: heroi) {
 //     console.log(pessoa);
-    
+
 // }
 
 // printaObjeto({
@@ -86,7 +86,7 @@ let soma: number = addNumber(4, 7);
 console.log(soma);
 console.log(addToHello(" Andre"));
 
-*/
+
 //interfaces ( types x interface)
 
 type robot = {
@@ -116,7 +116,7 @@ class Pessoa implements robot2 {
     id: string | number;
     name: string;
     sayHello(): string {
-        return "hello";
+        return "hello i'm ";
         
     }
    
@@ -127,3 +127,47 @@ class Pessoa implements robot2 {
     }
 }
 
+*/
+
+//Classes
+
+/* 
+public - 
+private - acessa dentro da classe.
+protected
+? - não obrigatório
+readonly - somente para leitura
+*/
+
+class Personagem {
+    private name?: string;
+    forca: number;
+    skill: number;
+
+    constructor(name: string, forca: number, skill: number) {
+        this.name = name;
+        this.forca = forca;
+        this.skill = skill;
+    }
+
+    public attack(): void {
+        console.log(`${this.name} Attack with ${this.forca} points`);
+
+    }
+}
+
+//Personagem é a superclass.
+//magic é a subclass.
+class magic extends Personagem{
+    constructor(
+        name: string,
+        forca: number,
+        skill: number,
+        magicPoints: number
+    ) {
+        super(name, forca, skill);
+    }
+}
+
+const p1 = new Personagem ('Britney',10, 90);
+p1.attack();

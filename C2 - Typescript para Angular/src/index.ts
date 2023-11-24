@@ -189,4 +189,25 @@ const stArray = concatArray<string[]>(['Britney', 'spears'], ['Goku ', 'Vegeta']
 // numArray.push('Saitama');
 console.log(numArray);
 console.log(stArray);
+
+
+
+//Decorators
+
+function ExibirNome(target: any) {
+    console.log(target);
+    
+}
+@ExibirNome
+class funcionario { }
+
+@ExibirNome
+class Quincas{}
+
 */
+
+function apiVersion(version: string) {
+    return (target) => {
+        Object.assign(target.prototype, {__version: version});
+};
+}
